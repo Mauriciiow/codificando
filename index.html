@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra De César</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main id="container-principal">
+
+        <div class="decifrador">
+            <form class="formulario-escolha">
+                <!-- <select name="forma-decifrar" id="forma-decifrar">
+                    <option disabled selected>Escolha como deseja decifrar</option>
+                    <option id="cesar" name="escolha" >Cifra De Cesar</option>
+                    <option id="base" name="escolha" >Base64 </option>
+                </select> -->
+                <div id="escolherModo">
+                    <label  for="modo">Cifra de Cesar</label>
+                    <input id="cesar" type="radio" name="modo" id="cesar" >
+                    <label  for="modo">Base64</label>
+                    <input id="base" type="radio" name="modo" id="base" >
+                </div>
+               
+                <div id="divCifra">
+                   
+                </div>
+
+              
+               
+            </form>
+        </div>
+
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
