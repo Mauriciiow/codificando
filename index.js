@@ -6,32 +6,27 @@
 //         } else {
 //             console.log('oi');
 //         }
-    
+
 // }
 
+var cesar = document.getElementById("cesar");
+var base = document.getElementById("base");
+var textoChave = document.getElementById("textoChave");
+var divCifra = document.getElementById("divCifra");
+var chave = document.getElementById("chave");
+var valorChave = chave.value;
+var sumir = document.querySelectorAll(".sumir");
 
-var cesar = document.getElementById('cesar')
-var base = document.getElementById('base')
-var textoChave = document.getElementById('textoChave')
-var h3 = document.createElement('h3')
+cesar.addEventListener("click", () => {
+  for (let i = 0; i < sumir.length; i++) {
+    sumir[i].style.display = "flex";
+  }
 
+  divCifra.style.flexDirection = "column";
+});
 
-cesar.addEventListener('click', ()=>{
-    console.log('clicou');
-    divCifra.append(h3)
-    h3.innerText = 'Escolha a chave:'
-    
-})
-
-
-base.addEventListener('click', ()=>{
-    console.log('clicou');
-    h3.remove()
-
-})
-
-
-
-
-
-
+base.addEventListener("click", () => {
+  for (let i = 0; i < sumir.length; i++) {
+    sumir[i].style.display = "none";
+  }
+});
