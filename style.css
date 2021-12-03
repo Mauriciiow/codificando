@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@100;400&family=Roboto:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@100;400&family=Nunito:wght@200;700&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,8 @@ body {
   background: #0e0b16;
   width: auto;
   min-height: 100vh;
-  font-family: "Fredoka One", cursive;
+  font-family: 'Fredoka One', cursive;
+  font-size: 21px;
 }
 
 #container-principal {
@@ -23,9 +23,12 @@ body {
 
 .decifrador {
   width: 50%;
-  height: 76%;
+  height: 65%;
   background: #693fff;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .formulario-escolha {
@@ -33,17 +36,24 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
+  
 }
 
-#cesar,
-#base {
+#codificar,
+#decodificar {
   margin-right: 15px;
+  margin-top: 18px;
   font-size: 26px;
 }
 
 label {
   font-size: 20px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 #divCifra {
@@ -53,16 +63,16 @@ label {
   align-items: center;
 }
 
-#divCifra h3 {
+ h3 {
   text-transform: uppercase;
-  margin-top: 15px;
+  
 }
 
 #divCifra input {
   padding: 8px;
   border: none;
   border-radius: 5px;
-  margin-top: 14px;
+  
 }
 
 #forma-decifrar {
@@ -75,4 +85,21 @@ label {
   font-size: 14px;
   margin-bottom: 15px;
   font-weight: bold;
+}
+
+#escolherModo {
+}
+
+#mensagemResultado {
+  display: flex;
+  flex-direction: column;
+}
+
+#mensagemResultado input {
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  
 }
