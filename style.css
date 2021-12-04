@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@100;400&family=Nunito:wght@200;700&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@100;400&family=Nunito:wght@200;700&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   background: #0e0b16;
   width: auto;
   min-height: 100vh;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
   font-size: 21px;
 }
 
@@ -31,12 +31,16 @@ body {
   align-items: center;
 }
 
+#teste {
+  display: flex;
+  flex-direction: column;
+}
+
 .formulario-escolha {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 
 #codificar,
@@ -56,23 +60,20 @@ h3 {
   text-align: center;
 }
 
-#divCifra {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
- h3 {
+h3 {
   text-transform: uppercase;
-  
 }
 
-#divCifra input {
+#escolherCesar input, #escolherBase64 input {
   padding: 8px;
   border: none;
   border-radius: 5px;
-  
+}
+
+#escolherBase64 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 #forma-decifrar {
@@ -87,8 +88,13 @@ h3 {
   font-weight: bold;
 }
 
-#escolherModo {
+#escolherCesar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 #mensagemResultado {
   display: flex;
@@ -101,5 +107,4 @@ h3 {
   align-items: center;
   border: none;
   border-radius: 5px;
-  
 }

@@ -9,40 +9,57 @@
   </head>
   <body>
     <main id="container-principal">
+
       <div class="decifrador">
+        
         <form class="formulario-escolha">
           <select id="forma-decifrar">
-            <option disabled selected value="textoSelecao">
-              Escolha como deseja decifrar
-            </option>
-            <option id="cesar" name="escolha" value="CifraCesar">
-              Cifra De Cesar
-            </option>
+            <option disabled selected value="textoSelecao"> Escolha como deseja decifra </option>
+            <option id="cesar" name="escolha" value="CifraCesar">Cifra De Cesar </option>
             <option id="base" name="escolha" value="Base64">Base64</option>
           </select>
+         
+            <div id="escolherCesar">
+        
+           
+              <h3>Escolha a chave</h3>
+              <input  id="chave" type="number" value="0" />
+              <h3>Criptografar ou Descriptografar:</h3>
+       
+             <div id="radioCesar">
+              <label for="codificarCesar">Codificar</label>
+              <input id="codificarCesar" type="radio" name="escolher" id="codificar" />
+              <label for="modo">Decodificar</label>
+              <input id="decodificarCesar" type="radio" name="escolher" id="decodificar" />
+             </div>
+        
+              <h3>Digite seu texto:</h3>
+              <input type="text" id="textoCifra">
+              <h3>Resultado:</h3>
+              <input type="text" id="resultadoCifra">
+            </div>
+          
 
-          <div id="divCifra">
-            <h3 class="sumir">Escolha a chave</h3>
-            <input class="sumir" id="chave" type="number" value="0" />
-            <h3>Criptografar ou Descriptografar:</h3>
-          </div>
-
-          <div id="escolherModo">
-            <label for="codificar">Codificar</label>
-            <input id="codificar" type="radio" name="codificar" id="cesar" />
-            <label for="modo">Decodificar</label>
-            <input id="decodificar" type="radio" name="Decodificar" id="base" />
-          </div>
-
-          <div id="mensagemResultado">
-            <h3>Digite seu texto:</h3>
-            <input type="text">
-            <h3>Resultado:</h3>
-            <input type="text">
-          </div>
+            <div id="escolherBase64">
+           
+              <h3>Criptografar ou Descriptografar:</h3>
+       
+           <div id="radioBase">
+              <label for="codificarBase">Codificar</label>
+              <input type="radio" name="escolherBase" id="codificarBase" />
+              <label for="modo">Decodificar</label>
+              <input type="radio" name="escolherBase" id="decodificarBase" />
+            </div>
+              <h3>Digite seu texto:</h3>
+              <input type="text" id="textoBase" autocomplete="off">
+              <h3>Resultado:</h3>
+              <input type="text" id="resultadoBase" autocomplete="off">
+            </div>
         </form>
       </div>
+      
     </main>
+
     <script src="./index.js"></script>
     <script src="./logica.js"></script>
   </body>
