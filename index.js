@@ -42,7 +42,7 @@ var decodificaBase = function (texto) {
   return decb64
 }
 
-textoBase.addEventListener('keydown', ()=>{
+textoBase.addEventListener('keyup', ()=>{
   var textoBaseValor = textoBase.value
   var codChecked =  codificarBase.checked
   var decodChecked = decodificarBase.checked
@@ -96,7 +96,7 @@ var decodificaCifra = function(arr, chave) {
   return arrNovo.join('')
 }
 
-textoCifra.addEventListener('keydown', ()=>{
+textoCifra.addEventListener('keyup', ()=>{
   var chaveValor = parseInt(chave.value)
   var textoCifraValor = textoCifra.value
   var textoArr = textoCifraValor.split('')
