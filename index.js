@@ -33,13 +33,6 @@ selecionar.addEventListener("change", () => {
   }
 });
 
-window.onload = function () {
-  divCesar.style.display = 'none'
-  divBase.style.display = 'none'
-}
-
-
-
 var converterBase = function(texto) {
   var resb64 = btoa(texto)
   return resb64
