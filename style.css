@@ -6,11 +6,13 @@
 }
 
 body {
-  background: #150f24;
+  
+  background: url('./imagens/background.gif');
   width: auto;
   min-height: 100vh;
   font-family: "Fredoka One", cursive;
   font-size: 21px;
+  color: #000000;
 }
 
 #container-principal {
@@ -24,7 +26,7 @@ body {
 .decifrador {
   width: 50%;
   height: 65%;
-  background: #693fff;
+  background: #23ad00;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -112,4 +114,17 @@ h3 {
 
 #naoEscolheu, #naoEscolheuCesar{
   margin-top: 10px;
+}
+
+@media (max-width: 600px){
+  .decifrador{
+    width: 90%;
+  }
+
+  .formulario-escolha {
+    width: 80%;
+  
+  }
+
+  
 }
