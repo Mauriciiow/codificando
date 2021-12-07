@@ -119,6 +119,7 @@ h3 {
 @media (max-width: 600px){
   .decifrador{
     width: 90%;
+    height: 85%;
   }
 
   .formulario-escolha {
@@ -127,6 +128,7 @@ h3 {
   }
   #forma-decifrar{
     width: 100%;
+    
   }
   
 }
