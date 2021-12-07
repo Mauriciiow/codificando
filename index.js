@@ -8,10 +8,12 @@ var resultadoCifra = document.getElementById('resultadoCifra')
 var codificarCesar = document.getElementById('codificarCesar')
 var decodificarCesar = document.getElementById('decodificarCesar')
 
+
 var textoBase = document.getElementById('textoBase')
 var resultadoBase = document.getElementById('resultadoBase')
 var codificarBase = document.getElementById('codificarBase')
 var decodificarBase = document.getElementById('decodificarBase')
+var naoEscolheu = document.getElementById('naoEscolheu')
 
 var esconderCesar = function () {
   divCesar.style.display = 'none'
@@ -53,17 +55,68 @@ textoBase.addEventListener('keyup', ()=>{
   var decodChecked = decodificarBase.checked
   if (codChecked) {
     resultadoBase.value = converterBase(textoBaseValor)
+    naoEscolheu.innerText = ''
   } else if (decodChecked) {
     resultadoBase.value = decodificaBase(textoBaseValor)
-  } 
+    naoEscolheu.innerText = ''
+  } else {
+    naoEscolheu.innerText = 'Escolha codificar ou decodificar!'
+  }
   
 
 })
+
+
+var converterCifra = function(arr, chave) {
+    var arrNovo = []
+   for (let i = 0; i < arr.length; i++) {
+    var letraCode  = arr[i].charCodeAt()
+    if (letraCode >= 65 && letraCode <= 90) {
+      arrNovo.push(String.fromCharCode((letraCode - 65  +  chave) % 26 + 65))
+    } else if(letraCode >= 97 && letraCode <= 122) {
+      arrNovo.push(String.fromCharCode((letraCode - 97  +  chave) % 26 + 97))
+    } else {
+       arrNovo.push(arr[i])
+    }
+    
+       
+         
+      }
+      return arrNovo.join('')
+    }
+
+var decodificaCifra = function(arr, chave) {
+  var arrNovo = []
+  for (let i = 0; i < arr.length; i++) {
+    var letraCode  = arr[i].charCodeAt()
+    if (letraCode >= 65 && letraCode <= 90) {
+      arrNovo.push(String.fromCharCode((letraCode - 90 -  chave) % 26 + 90))
+    } else if(letraCode >= 97 && letraCode <= 122) {
+      arrNovo.push(String.fromCharCode((letraCode - 122  -  chave) % 26 + 122))
+    } else {
+       arrNovo.push(arr[i])
+    }
+      
+   
+     
+  }
+  return arrNovo.join('')
+}
 
 textoCifra.addEventListener('keyup', ()=>{
-  var chaveValor = chave.value
+  var chaveValor = parseInt(chave.value)
   var textoCifraValor = textoCifra.value
+  var textoArr = textoCifraValor.split('')
   var codificarChecked = codificarCesar.checked
   var decodificarChecked = decodificarCesar.checked
+
+  if (codificarChecked) {
+    resultadoCifra.value = converterCifra(textoArr, chaveValor)  
+  
+  }else if(decodificarChecked){
+    resultadoCifra.value = decodificaCifra(textoArr, chaveValor)
+  }
+ 
   
 })
+

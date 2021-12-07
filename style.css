@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #0e0b16;
+  background: #150f24;
   width: auto;
   min-height: 100vh;
   font-family: "Fredoka One", cursive;
@@ -107,4 +107,9 @@ h3 {
   align-items: center;
   border: none;
   border-radius: 5px;
+}
+
+
+#naoEscolheu{
+  margin-top: 10px;
 }

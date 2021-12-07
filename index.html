@@ -14,7 +14,7 @@
         
         <form class="formulario-escolha">
           <select id="forma-decifrar">
-            <option disabled selected value="textoSelecao"> Escolha como deseja decifra </option>
+            <option disabled selected value="textoSelecao"> Escolha como deseja criptografar </option>
             <option id="cesar" name="escolha" value="CifraCesar">Cifra De Cesar </option>
             <option id="base" name="escolha" value="Base64">Base64</option>
           </select>
@@ -30,13 +30,13 @@
               <label for="codificarCesar">Codificar</label>
               <input id="codificarCesar" type="radio" name="escolher" id="codificar" />
               <label for="modo">Decodificar</label>
-              <input id="decodificarCesar" type="radio" name="escolher" id="decodificar" />
+              <input id="decodificarCesar" type="radio" name="escolher" id="decodificar"  />
              </div>
         
               <h3>Digite seu texto:</h3>
-              <input type="text" id="textoCifra">
+              <input type="text" id="textoCifra" autocomplete="off">
               <h3>Resultado:</h3>
-              <input type="text" id="resultadoCifra">
+              <input type="text" id="resultadoCifra" autocomplete="off">
             </div>
           
 
@@ -54,6 +54,7 @@
               <input type="text" id="textoBase" autocomplete="off">
               <h3>Resultado:</h3>
               <input type="text" id="resultadoBase" autocomplete="off">
+              <p id="naoEscolheu"></p>
             </div>
         </form>
       </div>
