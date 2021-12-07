@@ -7,7 +7,7 @@ var textoCifra = document.getElementById('textoCifra')
 var resultadoCifra = document.getElementById('resultadoCifra')
 var codificarCesar = document.getElementById('codificarCesar')
 var decodificarCesar = document.getElementById('decodificarCesar')
-
+var naoEscolheuCesar = document.getElementById('naoEscolheuCesar')
 
 var textoBase = document.getElementById('textoBase')
 var resultadoBase = document.getElementById('resultadoBase')
@@ -112,9 +112,12 @@ textoCifra.addEventListener('keyup', ()=>{
 
   if (codificarChecked) {
     resultadoCifra.value = converterCifra(textoArr, chaveValor)  
-  
+    naoEscolheuCesar.innerText = ''
   }else if(decodificarChecked){
     resultadoCifra.value = decodificaCifra(textoArr, chaveValor)
+    naoEscolheuCesar.innerText = ''
+  } else {
+    naoEscolheuCesar.innerText = 'Escolha codificar ou decodificar!'
   }
  
   
